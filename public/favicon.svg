@@ -1,0 +1,5 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Diamond Dot 'i' -->
+  <rect x="256" y="90" width="100" height="100" rx="10" fill="#00e5ff" transform="translate(-50, 0) rotate(45, 256, 140)" />
+  <rect x="216" y="250" width="80" height="172" rx="40" fill="#7000ff" />
+</svg>
