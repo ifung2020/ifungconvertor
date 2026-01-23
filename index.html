@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelShift | Modern Image Converter</title>
+  <meta name="description" content="A powerful, privacy-focused image converter that runs entirely in your browser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <div class="logo">
+        <span class="gradient-text">PixelShift</span>
+      </div>
+      <p class="subtitle">Secure, fast, and entirely on-device.</p>
+    </header>
+
+    <main>
+      <div class="converter-card" id="drop-zone">
+        <div class="upload-area">
+          <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-upload-cloud">
+              <path d="M16 16l-4-4-4 4"></path>
+              <path d="M12 12v9"></path>
+              <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
+              <polyline points="16 16 12 12 8 16"></polyline>
+            </svg>
+          </div>
+          <h2>Upload your image</h2>
+          <p>Drag & drop or <span class="browse-link" id="file-trigger">browse</span></p>
+          <input type="file" id="file-input" accept="image/*" multiple hidden />
+        </div>
+
+        <div id="file-list-section" class="hidden">
+          <div class="file-list-header">
+            <h3>Selected Images</h3>
+            <button id="clear-all-btn" class="text-btn">Clear All</button>
+          </div>
+
+          <div id="file-list" class="file-list">
+            <!-- File items will be injected here -->
+          </div>
+
+          <div class="conversion-controls">
+            <div class="control-group">
+              <label for="format-select">Convert all to:</label>
+              <div class="custom-select-wrapper">
+                <select id="format-select">
+                  <option value="image/jpeg">JPG</option>
+                  <option value="image/png">PNG</option>
+                  <option value="image/webp">WEBP</option>
+                  <option value="application/pdf">PDF</option>
+                </select>
+              </div>
+            </div>
+
+            <button id="convert-all-btn" class="primary-btn">
+              <span>Convert All & Download</span>
+            </button>
+          </div>
+
+          <button id="add-more-btn" class="secondary-btn">
+            + Add more images
+          </button>
+        </div>
+      </div>
+
+      <div id="status-message" class="status-message"></div>
+    </main>
+
+    <footer>
+      <p>© 2026 PixelShift. No images are ever sent to our servers.</p>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
