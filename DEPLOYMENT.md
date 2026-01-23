@@ -1,6 +1,6 @@
-# How to Deploy PixelShift
+# How to Deploy ifungconvertor
 
-Since PixelShift is a static web application (it runs entirely in the browser with no backend server), it's extremely easy to share with your friends.
+Since ifungconvertor is a static web application (it runs entirely in the browser with no backend server), it's extremely easy to share with your friends.
 
 ## Option 1: Netlify Drop (Easiest)
 
@@ -15,12 +15,19 @@ Since PixelShift is a static web application (it runs entirely in the browser wi
 4.  Netlify will give you a live URL instantly (e.g., `https://fluffy-unicorn-123456.netlify.app`).
 5.  Share that link with your friends!
 
-## Option 2: GitHub Pages
+## Option 2: GitHub Pages (Automated)
 
-1.  Push your code to a GitHub repository.
-2.  Go to the repository **Settings** -> **Pages**.
-3.  Select your main branch and the `/ (root)` folder (you might need to configure a workflow for Vite, or use the `gh-pages` package).
-    *   *Simpler alternative*: Run the build command, then manually upload the contents of the `dist` folder to a new separate repository (e.g., `username.github.io/my-app`).
+We have set up an automated deployment script for you.
+
+1.  **Deploy updates**: Whenever you want to update your live site, just run:
+    ```bash
+    npm run deploy
+    ```
+    This command will rebuild your project and publish it to the `gh-pages` branch.
+
+2.  **View your site**:
+    It will be live at: `https://ifung2020.github.io/ifungconvertor/`
+    *(Note: It may take 1-2 minutes for changes to appear after deployment)*
 
 ## Option 3: Send the files directly
 
