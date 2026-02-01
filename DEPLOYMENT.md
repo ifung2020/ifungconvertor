@@ -1,6 +1,13 @@
 # How to Deploy ifungconvertor
 
-Since ifungconvertor is a static web application (it runs entirely in the browser with no backend server), it's extremely easy to share with your friends.
+Since ifungconvertor is a static web application, it runs entirely in your browser with no backend server. 
+
+**Newly Added Capabilities:**
+- **HEIC/HEIF**: High-efficiency photos from iPhone.
+- **PDF Tools**: Convert PDF pages to JPG/PNG images and extract text to DOCX.
+- **Word Docs**: Convert DOCX to PDF or Text.
+- **GIF Studio**: Combine multiple images into a GIF.
+- **Privacy First**: All processing for these files still happens locally on your computer.
 
 ## Option 1: Netlify Drop (Easiest)
 

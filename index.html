@@ -34,9 +34,11 @@
               <polyline points="16 16 12 12 8 16"></polyline>
             </svg>
           </div>
-          <h2>Upload your image</h2>
+          <h2>Upload your files</h2>
           <p>Drag & drop or <span class="browse-link" id="file-trigger">browse</span></p>
-          <input type="file" id="file-input" accept="image/*" multiple hidden />
+          <input type="file" id="file-input"
+            accept="image/*,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,image/heic,image/heif"
+            multiple hidden />
         </div>
 
         <div id="file-list-section" class="hidden">
@@ -54,10 +56,18 @@
               <label for="format-select">Convert all to:</label>
               <div class="custom-select-wrapper">
                 <select id="format-select">
-                  <option value="image/jpeg">JPG</option>
-                  <option value="image/png">PNG</option>
-                  <option value="image/webp">WEBP</option>
-                  <option value="application/pdf">PDF</option>
+                  <optgroup label="Image">
+                    <option value="image/jpeg">JPG</option>
+                    <option value="image/png">PNG</option>
+                    <option value="image/webp">WEBP</option>
+                    <option value="image/gif">GIF</option>
+                    <option value="image/svg+xml">SVG</option>
+                  </optgroup>
+                  <optgroup label="Document">
+                    <option value="application/pdf">PDF</option>
+                    <option value="application/vnd.openxmlformats-officedocument.wordprocessingml.document">DOCX (Word)
+                    </option>
+                  </optgroup>
                 </select>
               </div>
             </div>
